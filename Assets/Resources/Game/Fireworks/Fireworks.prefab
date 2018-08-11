@@ -136,7 +136,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.4, y: 0}
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   core: {fileID: 114423612471368752}
+  fireworksDestroyDelay: 3
 --- !u!114 &114831435777047898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac3f4893e4dd46c785b1deba7d4a231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  core: {fileID: 114423612471368752}
   _rigidbody2D: {fileID: 50334768668485276}
   speed: 10
 --- !u!198 &198703434555421818

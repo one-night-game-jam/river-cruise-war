@@ -6,6 +6,6 @@ namespace Fireworks
 {
     public interface IFireworksExitHandler
     {
-        bool IFireworksExit();
+        void IFireworksExit();
     }
 }

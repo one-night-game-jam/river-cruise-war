@@ -16,10 +16,9 @@ namespace Players
             return false;
         }
 
-        public bool IFireworksExit()
+        public void IFireworksExit()
         {
             isSlowMotion = false;
-            return false;
         }
 
         private void Update()
