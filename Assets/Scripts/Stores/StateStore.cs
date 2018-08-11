@@ -10,7 +10,7 @@ namespace Stores
 
         public IObservable<bool> IsPlayerJumpable()
         {
-            return State.Select(s => s == Stores.State.Entering || s == Stores.State.Playing);
+            return State.Select(s => s == Stores.State.Waiting || s == Stores.State.Playing);
         }
     }
 }
