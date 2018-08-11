@@ -5,6 +5,6 @@ namespace Stores
 {
     public class ScoreStore : MonoBehaviour
     {
-        public LongReactiveProperty CruisedDistance;
+        public FloatReactiveProperty CruisedDistance;
     }
 }
