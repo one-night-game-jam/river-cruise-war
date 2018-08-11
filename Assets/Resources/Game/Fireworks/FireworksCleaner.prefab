@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4803217869384692}
   - component: {fileID: 114510069749890782}
   - component: {fileID: 61715282505253948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FireworksCleaner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
