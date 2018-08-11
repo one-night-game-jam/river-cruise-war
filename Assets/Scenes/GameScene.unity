@@ -336,11 +336,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114595537092142696, guid: 9bfc59ddf3b2b4419948de73437dd9ff,
-        type: 2}
-      propertyPath: bigWaveSpawnRate
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bfc59ddf3b2b4419948de73437dd9ff, type: 2}
   m_IsPrefabAsset: 0
@@ -504,7 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66438c62d34d14f409b1d1345b363f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeDistanceScale: 10
+  TimeDistanceScale: 100
 --- !u!4 &1882882470
 Transform:
   m_ObjectHideFlags: 0
