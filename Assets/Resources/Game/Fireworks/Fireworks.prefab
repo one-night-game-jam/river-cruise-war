@@ -54,10 +54,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4552464022696242}
   - component: {fileID: 212117771656587264}
+  - component: {fileID: 50334768668485276}
   - component: {fileID: 114423612471368752}
   - component: {fileID: 114831435777047898}
   - component: {fileID: 114222344964281768}
-  - component: {fileID: 50334768668485276}
+  - component: {fileID: 114830040552243804}
   m_Layer: 0
   m_Name: Fireworks
   m_TagString: Untagged
@@ -151,6 +152,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c4e3d8f3a694168a761726227968a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114830040552243804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1865579680128584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6808853d1b80842a689be32139a77802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  core: {fileID: 114423612471368752}
 --- !u!114 &114831435777047898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 50334768668485276}
-  speed: 2
+  speed: 5
 --- !u!198 &198703434555421818
 ParticleSystem:
   m_ObjectHideFlags: 1
