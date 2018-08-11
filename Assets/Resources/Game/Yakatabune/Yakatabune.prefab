@@ -239,9 +239,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 50362806521848920}
-  gravity: 2
-  buoyancy: 3
-  waterElasticity: 0.25
+  gravity: 3
+  buoyancy: 3.5
+  waterElasticity: 0.3
   pitchRate: 10
   minJumpVelocity: 3
   jumpableAltitude: 1

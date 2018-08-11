@@ -56,4 +56,4 @@ MonoBehaviour:
     type: 2}
   waveSpawnSpanSeconds: 9
   bigWaveSpawnCheckSpanSeconds: 2
-  bigWaveSpawnRate: 0.3
+  bigWaveSpawnRate: 0.4
