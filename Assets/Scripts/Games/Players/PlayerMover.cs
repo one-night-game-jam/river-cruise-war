@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using Inputs;
+using Stores;
+using UniRx;
+using UnityEngine;
+using Zenject;
 
 namespace Games.Players
 {
@@ -14,12 +18,45 @@ namespace Games.Players
         float waterElasticity;
         [SerializeField]
         float pitchRate;
+        [SerializeField]
+        float minJumpVelocity;
+        [SerializeField]
+        float jumpableAltitude;
+        [SerializeField]
+        float jumpCooldownTimeSeconds;
+
+        [Inject]
+        InputEventProvider inputEventProvider;
+        [Inject]
+        StateStore stateStore;
 
         public float positionX;
 
         float velocity;
         float angle;
+        float remainingJumpCooldownTimeSeconds;
 
+        int mapLayerMask;
+
+        void Awake()
+        {
+            mapLayerMask = 1 << LayerMask.NameToLayer("Map");
+        }
+
+        void Start()
+        {
+            inputEventProvider.Drive
+                .Where(_ => remainingJumpCooldownTimeSeconds <= 0)
+                .WithLatestFrom(stateStore.IsPlayerJumpable(), (_, x) => x)
+                .Where(x => x && IsJumpable())
+                .Subscribe(_ => Jump())
+                .AddTo(this);
+        }
+
+        void Update()
+        {
+            remainingJumpCooldownTimeSeconds -= Time.deltaTime;
+        }
 
         void FixedUpdate()
         {
@@ -41,6 +78,18 @@ namespace Games.Players
         void OnTriggerEnter2D(Collider2D other)
         {
             velocity *= waterElasticity;
+        }
+
+        bool IsJumpable()
+        {
+            var hit = Physics2D.Raycast(transform.position, Vector2.down, jumpableAltitude, mapLayerMask);
+            return hit.collider != null;
+        }
+
+        void Jump()
+        {
+            velocity += Mathf.Max(velocity, minJumpVelocity);
+            remainingJumpCooldownTimeSeconds = jumpCooldownTimeSeconds;
         }
     }
 }

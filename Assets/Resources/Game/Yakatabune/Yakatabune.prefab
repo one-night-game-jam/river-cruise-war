@@ -73,7 +73,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -121,6 +121,9 @@ MonoBehaviour:
   buoyancy: 1.5
   waterElasticity: 0.25
   pitchRate: 10
+  minJumpVelocity: 1
+  jumpableAltitude: 0.5
+  jumpCooldownTimeSeconds: 2
   positionX: -4.5
 --- !u!212 &212638846344249066
 SpriteRenderer:
