@@ -24,8 +24,7 @@ namespace Games.Scores
                 .Where(s => s == State.Playing)
                 .Subscribe(_ => UpdateScore())
                 .AddTo(this);
-            this.UpdateAsObservable()
-                .WithLatestFrom(stateStore.State, (_, state) => state)
+            stateStore.State
                 .Where(s => s == State.Entering)
                 .Subscribe(_ => ResetScore())
                 .AddTo(this);
