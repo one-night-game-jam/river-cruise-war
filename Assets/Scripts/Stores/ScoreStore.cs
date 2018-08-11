@@ -1,6 +1,8 @@
+using UnityEngine;
+
 namespace Stores
 {
-    public class ScoreStore
+    public class ScoreStore : MonoBehaviour
     {
         public long CruisedDistance;
     }
