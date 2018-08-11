@@ -4,14 +4,9 @@ using UnityEngine;
 
 namespace Fireworks
 {
-    public class FireworksCleaner : MonoBehaviour, IFireworksEnterHandler, IFireworksExitHandler
+    public class FireworksCleaner : MonoBehaviour, IFireworksEnterHandler
     {
         public bool IFireworksEnter()
-        {
-            return true;
-        }
-
-        public bool IFireworksExit()
         {
             return true;
         }

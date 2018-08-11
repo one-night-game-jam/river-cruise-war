@@ -7,6 +7,7 @@ namespace Fireworks
     public class FireworksGunPowder : MonoBehaviour
     {
         [SerializeField] private FireworksCore core;
+        [SerializeField] private double fireworksDestroyDelay;
 
         void OnTriggerEnter2D(Collider2D other)
         {
@@ -14,16 +15,15 @@ namespace Fireworks
             if (enterHandler != null && enterHandler.IFireworksEnter())
             {
                 core.Explode();
+                Observable.Timer(TimeSpan.FromSeconds(fireworksDestroyDelay))
+                    .Subscribe(_ => Destroy(this.gameObject));
             }
         }
 
         void OnTriggerExit2D(Collider2D other)
         {
             var exitHandler = other.GetComponent<IFireworksExitHandler>();
-            if (exitHandler != null && exitHandler.IFireworksExit())
-            {
-                Destroy(this.gameObject);
-            }
+            if (exitHandler != null) exitHandler.IFireworksExit();
         }
     }
 }
