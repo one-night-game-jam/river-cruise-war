@@ -23,7 +23,9 @@ namespace Titles
                 .Where(x => x == State.Entering)
                 .Subscribe(_ =>
                 {
+                    playerMover.enabled = true;
                     playerRigidBody.position = initalPlayerPosition;
+                    playerRigidBody.rotation = 0;
                     stateStore.State.Value = State.Waiting;
                 })
                 .AddTo(this);
