@@ -19,7 +19,7 @@ namespace Results
 
         private void Start()
         {
-            playerRigidBody = playerMover.GetComponent<Rigidbody2D>();
+            playerRigidBody = playerMover.GetComponentInParent<Rigidbody2D>();
             this.FixedUpdateAsObservable()
                 .WithLatestFrom(stateStore.State, (_, x) => x)
                 .Where(x => x == State.Dead)
