@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Games.Players
 {
-    public class BulletHittable : MonoBehaviour, IFireworksEnterHandler
+    public class BulletHittable : MonoBehaviour, IFireworksEnterHandler, IFireworksExitHandler
     {
         [Inject]
         StateStore stateStore;
@@ -13,6 +13,11 @@ namespace Games.Players
         bool IFireworksEnterHandler.IFireworksEnter()
         {
             stateStore.State.Value = State.Dead;
+            return true;
+        }
+
+        public bool IFireworksExit()
+        {
             return true;
         }
     }
