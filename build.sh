@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BRANCH=origin/build-script
+BRANCH=origin/master
 BUILD_WORKSPACE=build
 ARTIFACTS_WORKSPACE=gh-pages
 UNITY_PATH=/Applications/Unity/Hub/Editor/2018.2.2f1/Unity.app/Contents/MacOS/Unity
