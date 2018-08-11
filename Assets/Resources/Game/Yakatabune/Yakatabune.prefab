@@ -239,11 +239,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 50362806521848920}
-  gravity: 1
-  buoyancy: 1.5
+  gravity: 2
+  buoyancy: 2.5
   waterElasticity: 0.25
   pitchRate: 10
-  minJumpVelocity: 1
+  minJumpVelocity: 3
   jumpableAltitude: 1
   jumpCooldownTimeSeconds: 2
   positionX: -4.5

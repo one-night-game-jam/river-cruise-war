@@ -54,6 +54,6 @@ MonoBehaviour:
   wavePrefab: {fileID: 1198441978224472, guid: c88930849d8184e308ad62a0ca326b30, type: 2}
   bigWavePrefab: {fileID: 1253867361269004, guid: 5d0f57e7f83e44ad095fc237dc33d32e,
     type: 2}
-  waveSpawnSpanSeconds: 25
+  waveSpawnSpanSeconds: 9
   bigWaveSpawnCheckSpanSeconds: 2
   bigWaveSpawnRate: 0.1

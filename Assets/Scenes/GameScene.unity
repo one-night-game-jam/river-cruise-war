@@ -336,6 +336,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114595537092142696, guid: 9bfc59ddf3b2b4419948de73437dd9ff,
+        type: 2}
+      propertyPath: bigWaveSpawnRate
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bfc59ddf3b2b4419948de73437dd9ff, type: 2}
   m_IsPrefabAsset: 0
@@ -564,7 +569,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4803217869384692, guid: 26d736b86305649e3ad72dd3126ac91a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -12
+      value: -9.38
       objectReference: {fileID: 0}
     - target: {fileID: 4803217869384692, guid: 26d736b86305649e3ad72dd3126ac91a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -593,10 +598,6 @@ Prefab:
     - target: {fileID: 4803217869384692, guid: 26d736b86305649e3ad72dd3126ac91a, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4803217869384692, guid: 26d736b86305649e3ad72dd3126ac91a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26d736b86305649e3ad72dd3126ac91a, type: 2}

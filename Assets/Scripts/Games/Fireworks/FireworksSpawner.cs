@@ -29,7 +29,7 @@ namespace Fireworks
             if (stateStore.State.Value == State.Playing && remainingCoolDown <= 0)
             {
                 EmitFireworks();
-                remainingCoolDown = coolDown;
+                remainingCoolDown = Random.value * coolDown;
             }
         }
 
