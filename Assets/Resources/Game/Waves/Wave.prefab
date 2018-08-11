@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4766952955064282}
   - component: {fileID: 212446659567767248}
   - component: {fileID: 114042859271227476}
-  - component: {fileID: 61623820349453174}
+  - component: {fileID: 60653921994391086}
   m_Layer: 8
   m_Name: Wave
   m_TagString: Untagged
@@ -36,14 +36,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1198441978224472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.5, y: -3.8, z: 0}
-  m_LocalScale: {x: 1820.9, y: 145.2, z: 1}
+  m_LocalPosition: {x: -11.2, y: -3.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61623820349453174
-BoxCollider2D:
+--- !u!60 &60653921994391086
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -58,15 +58,22 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.02, y: 0.02}
+    oldSize: {x: 37.37, y: 3.21}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -12.82277, y: 0.94905996}
+      - {x: -10.503929, y: 1.0999222}
+      - {x: -3.615714, y: -0.07662535}
+      - {x: 2.7746563, y: 1.2951441}
+      - {x: 8.57266, y: 0.31692076}
+      - {x: 12.691723, y: 0.062749624}
+      - {x: 18.630169, y: -1.5885618}
+      - {x: -18.637156, y: -1.6046426}
 --- !u!114 &114042859271227476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,8 +121,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e2b4f9472cb274bd5ad4b68dd9fcbda0, type: 3}
-  m_Color: {r: 0, g: 0.6403694, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 937b7ff0c3da447baba3360bd9e11f4d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
