@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Linq;
+using Stores;
 using UniRx;
 using UnityEngine;
+using Zenject;
 
 namespace Fireworks
 {
@@ -13,6 +15,9 @@ namespace Fireworks
         private float remainingCoolDown;
         private float deltaFromLastEmission = 0;
 
+        [Inject]
+        StateStore stateStore;
+
         private void Update()
         {
             EmitFireworksIfNecessary();
@@ -21,10 +26,10 @@ namespace Fireworks
         private void EmitFireworksIfNecessary()
         {
             remainingCoolDown -= Time.deltaTime;
-            if (remainingCoolDown <= 0)
+            if (stateStore.State.Value == State.Playing && remainingCoolDown <= 0)
             {
                 EmitFireworks();
-                remainingCoolDown = coolDown;
+                remainingCoolDown = Random.value * coolDown;
             }
         }
 
