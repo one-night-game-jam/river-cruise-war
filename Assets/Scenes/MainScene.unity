@@ -389,6 +389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneNames:
   - GameScene
+  - TitleScene
   - ResultScene
 --- !u!4 &1650228446
 Transform:
