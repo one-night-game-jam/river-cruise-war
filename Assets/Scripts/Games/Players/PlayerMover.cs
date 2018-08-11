@@ -15,13 +15,20 @@ namespace Games.Players
         [SerializeField]
         float pitchRate;
 
+        public float positionX;
+
         float velocity;
         float angle;
+
 
         void FixedUpdate()
         {
             velocity -= gravity * Time.fixedDeltaTime;
-            _rigidbody2D.position += Vector2.up * velocity * Time.fixedDeltaTime;
+            var pos = _rigidbody2D.position;
+            pos += Vector2.up * velocity * Time.fixedDeltaTime;
+            pos.x = positionX;
+            _rigidbody2D.position = pos;
+
             _rigidbody2D.rotation = angle;
         }
 
