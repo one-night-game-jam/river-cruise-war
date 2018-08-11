@@ -20,9 +20,9 @@ namespace Fireworks
         void OnTriggerExit2D(Collider2D other)
         {
             var exitHandler = other.GetComponent<IFireworksExitHandler>();
-            if (exitHandler != null)
+            if (exitHandler != null && exitHandler.IFireworksExit())
             {
-                exitHandler.IFireworksExit();
+                Destroy(this.gameObject);
             }
         }
     }
