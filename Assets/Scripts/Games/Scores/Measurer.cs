@@ -24,11 +24,21 @@ namespace Games.Scores
                 .Where(s => s == State.Playing)
                 .Subscribe(_ => UpdateScore())
                 .AddTo(this);
+            this.UpdateAsObservable()
+                .WithLatestFrom(stateStore.State, (_, state) => state)
+                .Where(s => s == State.Entering)
+                .Subscribe(_ => ResetScore())
+                .AddTo(this);
         }
 
         void UpdateScore()
         {
             scoreStore.CruisedDistance.Value += Time.deltaTime * TimeDistanceScale;
+        }
+
+        void ResetScore()
+        {
+            scoreStore.CruisedDistance.Value = 0;
         }
     }
 }
