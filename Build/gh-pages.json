@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "river-cruise-war",
+"dataUrl": "gh-pages.data.unityweb",
+"wasmCodeUrl": "gh-pages.wasm.code.unityweb",
+"wasmFrameworkUrl": "gh-pages.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}
